@@ -7,19 +7,19 @@ const isAnagram = require('../src/anagram');
 */
 
 test('isAnagram function exists', () => {
-  // Complete here
+  expect(isAnagram).toBeDefined();
 });
 
 test('"cinema" is an anagram of "iceman"', () => {
-  // Complete here
+  expect(isAnagram("cinema","iceman")).toBe(true);
 });
 
 test('"Dormitory" is an anagram of "dirty room##"', () => {
-  // Complete here
+  expect(isAnagram("Dormitory","dirty room##")).toBe(true);
 });
 
 test('"Hello" is NOT an anagram of "Aloha"', () => {
-  // Complete here
+  expect(isAnagram("Hello","Aloha")).not.toBe(true);
 });
 
 /*
@@ -38,22 +38,22 @@ describe('Checking Names', () => {
   test('User is Jeff', () => {
     const user = 'Jeff';
     //Check if the user is Jeff
-    // Complete here
+    
   });
 
   test('User is Karen', () => {
     const user = 'Karen';
     //Check if the user is Karen
-    // Complete here
+    
   });
 });
 
 test('Adds 2 + 2 to equal 4', () => {
-  // Complete here
+  expect(2+2).toBe(4);
 });
 
 test('Adds 2 + 2 to NOT equal 5', () => {
-  // Complete here
+  expect(2+2).not.toBe(5);
 });
 
 /*
@@ -70,12 +70,12 @@ test('Adds 2 + 2 to NOT equal 5', () => {
 // toBeFalsy matches anything that an if statement treats as false
 
 test('Should be null', () => {
-  // Complete here
+  expect(null).toBeNull();
 });
 
 // toBeFalsy
 test('Should be falsy', () => {
-  // Complete here
+  expect(2<1).toBeFalsy();
 });
 
 // toEqual
@@ -118,13 +118,13 @@ test('User fetched name should be Leanne Graham', async () => {
 const reverseString = require('../src/reversestr');
 
 test('reverseString function exists', () => {
-  // Complete here
+  expect(reverseString).toBeDefined();
 });
 
 test('String reverses', () => {
-  // Complete here
+  expect(reverseString('String reverses')).toBe("sesrever gnirts");
 });
 
 test('String reverses with uppercase', () => {
-  // Complete here
+  expect(reverseString('String reverses').toUpperCase()).toBe("SESREVER GNIRTS");
 });
