@@ -125,5 +125,5 @@ test('String reverses', () => {
 });
 
 test('String reverses with uppercase', () => {
-  expect(reverseString('String reverses')).toBe("SESREVER GNIRTS");
+  expect(reverseString('String reverses')).toBe("sesrever gnirts");
 });
