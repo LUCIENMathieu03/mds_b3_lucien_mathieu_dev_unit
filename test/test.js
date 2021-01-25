@@ -37,23 +37,22 @@ describe('Checking Names', () => {
 
   test('User is Jeff', () => {
     const user = 'Jeff';
-    //Check if the user is Jeff
+    expect(functions.checkValue(user)).toBe("Jeff");
     
   });
 
   test('User is Karen', () => {
     const user = 'Karen';
-    //Check if the user is Karen
+    expect(functions.checkValue(user)).toBe("Karen");
     
   });
 });
 
 test('Adds 2 + 2 to equal 4', () => {
-  expect(2+2).toBe(4);
-});
+  expect(functions.add(2,2)).toBe(4);
 
 test('Adds 2 + 2 to NOT equal 5', () => {
-  expect(2+2).not.toBe(5);
+  expect(functions.add(2,2)).not.toBe(5);
 });
 
 /*
@@ -70,7 +69,7 @@ test('Adds 2 + 2 to NOT equal 5', () => {
 // toBeFalsy matches anything that an if statement treats as false
 
 test('Should be null', () => {
-  expect(null).toBeNull();
+  expect(functions.isNull()).toBeNull();
 });
 
 // toBeFalsy
@@ -87,7 +86,7 @@ test('User should be Marc Antoine object', () => {
 test('Should be under or equal 1000', () => {
   const load1 = 500;
   const load2 = 500;
-  // Complete here
+  expect(functions.add(load1,load2)).toBeLessThanOrEqual(1000);
 });
 
 // Regex
@@ -122,9 +121,9 @@ test('reverseString function exists', () => {
 });
 
 test('String reverses', () => {
-  expect(reverseString('String reverses')).toBe("sesrever gnirts");
+  expect(reverseString('string reverses')).toBe("sesrever gnirts");
 });
 
 test('String reverses with uppercase', () => {
-  expect(reverseString('String reverses').toUpperCase()).toBe("SESREVER GNIRTS");
+  expect(reverseString('String reverses')).toBe("SESREVER GNIRTS");
 });
